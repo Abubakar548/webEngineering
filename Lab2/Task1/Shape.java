@@ -7,9 +7,8 @@ double volume = 0;
 
 public String toString ( )
 {
- System.out.println ("Area = " + area);
- System.out.println ("Volume = " + volume);
- return null;
+ String s = "Area = " + area+ "Volume = " + volume;
+ return s;
  }
 
 public abstract void calculateArea ( );
