@@ -7,7 +7,7 @@ double volume = 0;
 
 public String toString ( )
 {
- String s = "Area = " + area+ "Volume = " + volume;
+ String s = "Area = " + area+ "\nVolume = " + volume;
  return s;
  }
 
