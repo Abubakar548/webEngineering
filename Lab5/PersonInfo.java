@@ -1,6 +1,8 @@
 import java.io.Serializable;
 import java.util.*;
 
+import javax.swing.JOptionPane;
+
 class PersonInfo implements Serializable
 {
     
@@ -64,7 +66,8 @@ class PersonInfo implements Serializable
 
     void printPerson()
     {
-        System.out.println("Name : - " + name + "AccountNo : - " + accNo + "Amount : - " + amount );
+        JOptionPane.showMessageDialog(null ,"Name : - " + name + "AccountNo : - " + accNo + "Amount : - " + amount );
+        
     }
     
 
