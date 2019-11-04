@@ -20,7 +20,7 @@ class Bank{
     {
         for(int i = 0 ; i <accounts.size();i++)
         {
-            if(accounts.get(i).accNo == accNo)
+            if(accounts.get(i).accNo.equals(accNo) )
             {
                 return i;
             }
@@ -32,8 +32,13 @@ class Bank{
     // addNew Record
     void addNewRecord(String name , String accNo , String pcode )
     {
+        if(search(accNo) == -1)
+        {
         PersonInfo e = new PersonInfo (name , accNo ,pcode);
         accounts.add(e);
+        }
+        else
+        System.out.println("User with that account number already Exsist");
     }
 
     // TRANSFER
