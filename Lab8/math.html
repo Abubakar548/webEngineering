@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+
+    function sum() {
+        a = prompt("Enter 1st input: ", "")
+        b = prompt("Enter 2nd input: ", "")
+        return parseFloat(a) + parseFloat(b)
+    }
+
+    function sub() {
+        a = prompt("Enter 1st input: ", "")
+        b = prompt("Enter 2nd input: ", "")
+        return parseFloat(a) - parseFloat(b)
+    }
+    function mul() {
+        a = prompt("Enter 1st input: ", "")
+        b = prompt("Enter 2nd input: ", "")
+        return parseFloat(a) * parseFloat(b)
+    }
+    function div() {
+        a = prompt("Enter 1st input: ", "")
+        b = prompt("Enter 2nd input: ", "")
+        if (b == 0) {
+            alert("Denominator cannot be zero")
+            return false
+        }
+        return parseFloat(a) / parseFloat(b)
+    }
+
+</script>
+
+<body>
+
+    <input type="button" value="Sum" onclick="return document.write(sum())">
+    <br>
+    <input type="button" value="Sub" onclick="return document.write(sub())">
+    <br>
+    <input type="button" value="Multiply" onclick="return document.write(mul())">
+    <br>
+    <input type="button" value="Divide" onclick="return document.write(div())">
+
+</body>

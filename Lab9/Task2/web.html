@@ -1,0 +1,56 @@
+<head>
+
+	<script type="text/javaScript">
+			function validate()
+			{
+			var name=document.getElementById("name").value;
+			var email=document.getElementById("email").value;
+			var pwd=document.getElementById("pwd").value;
+			var repwd=document.getElementById("repwd").value;
+
+			
+			if ( name == "" )
+			{
+			document.getElementById("error").innerHTML="Empty NAME";
+			return false;
+			}
+
+			if ( email == ""||email.indexOf('@') == -1||email.indexOf('.')== -1 || email.length<=6 )
+			{
+			document.getElementById("error").innerHTML="Invalid Email";
+			return false;
+			}
+			if(email.indexOf('@')+1 == email.indexOf('.') ||email.indexOf('@')> email.indexOf('.'))
+			{
+			document.getElementById("error").innerHTML="Invalid Email";
+			return false;
+			}
+			
+			if(pwd == "" || repwd =="" || pwd!=repwd)	
+			   {
+					document.getElementById("error").innerHTML="Invalid Password";
+					return false;
+			   }
+		
+			return true;
+		 }
+		
+		</script>
+
+</head>
+
+<body>
+	<form>
+		Name:<input type="text" id="name"><br>
+		Email:<input type="text" id="email"><br>
+		Password:<input type="text" id="pwd"><br>
+		Confirm password:<input type="text" id="repwd"><br>
+		<div id="error" style="color:red;"></div>
+		<input type="button" onclick="validate()" value="Submit">
+
+
+	</form>
+</body>
+
+</html>
+<div id="eresult" style="color:red;"></div>
